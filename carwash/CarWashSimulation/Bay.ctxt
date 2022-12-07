@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Bay
+comment0.text=\n\ keeps\ track\ of\ whether\ or\ not\ the\ car\ wash\ is\ available\ and\ how\ \n\ much\ longer\ the\ current\ car\ wash\ will\ take\ (one\ q\ bay)\n\n\ @author\ (Amalia)\n\ @version\ (April\ 28th)\n
+comment1.params=totalWashTime
+comment1.target=Bay(int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Bay\n
+comment2.params=
+comment2.target=boolean\ isEmpty()
+comment2.text=\n\ find\ out\ the\ status\ of\ the\ bay\ empty\ or\ nawh\ \n
+comment3.params=
+comment3.target=void\ reset()
+comment3.text=\n\ restes\ the\ sim\ spefically\ the\ ba\ after\ one\ trial\ run\ \n
+comment4.params=
+comment4.target=void\ startWash()
+comment4.text=\n\ start\ new\ wash.\ acts\ as\ a\ time\ keeper\ for\ how\ long\ a\ car\ is\ being\ washed\ and\ \n\ how\ long\ it\ is\ going\ to\ take\ until\ its\ done\n
+comment5.params=
+comment5.target=void\ keepWashing()
+comment5.text=\ \n\ If\ the\ car\ is\ in\ the\ bay\ keep\ washing\ until\ it\ is\ done\ \n\ \n
+numComments=6
