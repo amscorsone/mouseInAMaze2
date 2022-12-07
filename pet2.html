@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+   var counter_value
+    var state_value
+    var Sound_value
+
+    // intails plus how they change 
+function loadpage() {
+     counter.value = 0
+     State.value = "sad"
+     setInterval("update()",1000)
+
+     if (State.value == "happy")
+     {
+        Sound.value = "oink"
+        Movement.value = "jumps up and down"
+        document.getElementById('petpic').src = "happypig.webp"
+     }
+
+     else if (State.value == "sad")
+     {
+        Sound.value = "sad oink"
+        Movement.value = "sits down and stares at you"
+        document.getElementById('petpic').src = "sadpig.webp"
+     }
+
+     else if (State.value =="fighty")
+     {
+         Sound.value = "grunting"
+         Movement.value = "pacing back and forth"
+         document.getElementById('petpic').src = "fightypig.webp"
+
+     }
+
+     else if (State.value == "tired")
+     {
+         Sound.value = "sigh"
+         Movement.value = "lay down"
+         document.getElementById('petpic').src = "tiredpig.webp"
+     }
+     
+}
+    
+function update(){
+    counter.value++
+    var randomVal = Math.random();
+    if (State.value == "tired" && randomVal < 0.3)
+    {
+         State.value = "fighty";
+         Sound.value = "grunting"
+         Movement.value = "pacing back and forth"
+         document.getElementById('petpic').src = "fightypig.webp"
+    }
+
+    else if (State.value == "happy" && randomVal < 0.20)
+    {
+        State.value = "sad";
+        Sound.value = "sigh"
+        Movement.value = "lays down"
+        document.getElementById('petpic').src = "sadpig.webp"
+    }
+}
+
+function play(){
+if (State.value  == "sad")
+{
+    State.value = "tired"
+        Sound.value = "sigh"
+        Movement.value = "lays down"
+        document.getElementById('petpic').src = "tiredpig.webp"
+
+}
+else if (State.value == "fighty")
+{
+    State.value = "happy"
+        Sound.value = "oink"
+        Movement.value = "jumps up and down"
+        document.getElementById('petpic').src = "happypig.webp"
+}}
+
+function ignore(){
+    if (State.value  == "sad")
+{
+    State.value = "sad"
+    Sound.value = "sader oink"
+    Movement.value = "starts to cry"
+    document.getElementById('petpic').src = "sadpig.webp"
+}
+else if (State.value  == "fighty")
+{
+    State.value = "fighty"
+   Sound.value = " louder grunting"
+    Movement.value = "runs"
+    document.getElementById('petpic').src = "fightypig.webp"
+
+}}
+
+
+</script>
+</head>
+<body onload="loadpage()">
+
+    <h1>My Virtual Pet: Mr. Pig</h1>
+
+    <h4>Hi Hi Hi, let me introduce you to my pet pig Kiki!! (His real name is donkey but I call him Kiki for short)</h4>
+    <p>Now that you have been introduce you may interact with him. Depeding on what you do he will change emontions, but sometimes
+        he changes them on his own so watch out for moments like those. Have fun!
+    </p>
+    <hr>
+    <div></div>
+    <b>Simulation time (in seconds):</b>
+    <div></div>
+    <input readonly type="text" value="yes" id="counter">
+    
+    <p></p>
+    
+   <b> Mr. Pig is:</b>
+    <div></div>
+    <input readonly type="text" value="yes" id="State">
+
+
+    <td>
+        <p class = >
+        <img src="sadpig.webp" width="300" height="250" alt="Luna" id = "petpic"/> <br>
+        </p>
+    </td>
+
+    <td>
+        <p class = >
+        <img src="sadpig.webp" width="300" height="250" alt="Luna" id = "petpic"/> <br>
+        </p>
+    </td>
+
+<div></div>
+<b>Piggy Noise</b>
+<div></div>
+    <input readonly type="text" id="Sound" value="yes" size=20>
+<div></div>
+
+<p>
+<div></div>
+<b>Piggy Action:</b>
+<div></div>
+    <input readonly type="text" id="Movement" value="yes" size=25>
+<div></div>
+</p>
+
+<p>
+<input type="button" value="Ignore piggy" onclick="ignore()">
+<input type="button" value="Play with piggy" onclick="play()">
+  </p>
+
+</body>
+</html>
